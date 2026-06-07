@@ -9,18 +9,18 @@ public class TemperatureConverter {
             //converts the entered temperature to Fahrenheit
             temperatureChange = (temperature * 9 / 5) + 32;
             System.out.printf("%.2f", temperature);
-            System.out.print("°C is equal to ");
+            System.out.print("C is equal to ");
             System.out.printf("%.2f", temperatureChange);
-            System.out.println("°F");
+            System.out.println("F");
             System.out.println();
         }
         if (unit.equals("F")) {
             //converts the entered temperature to Celsius
             temperatureChange = (temperature - 32) * 5 / 9;
             System.out.printf("%.2f", temperature);
-            System.out.print("°F is equal to ");
+            System.out.print("F is equal to ");
             System.out.printf("%.2f", temperatureChange);
-            System.out.println("°C");
+            System.out.println("C");
             System.out.println();
         }
 
