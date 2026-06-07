@@ -5,7 +5,7 @@ public class TemperatureConverter {
     public static double convertTemperature(double temperature, String unit) {
         double temperatureChange = 0.0;
 
-        if (unit.equals("C")) {
+        if (unit.equalsIgnoreCase("C")) {
             //converts the entered temperature to Fahrenheit
             temperatureChange = (temperature * 9 / 5) + 32;
             System.out.printf("%.2f", temperature);
@@ -14,7 +14,7 @@ public class TemperatureConverter {
             System.out.println("F");
             System.out.println();
         }
-        if (unit.equals("F")) {
+        if (unit.equalsIgnoreCase("F")) {
             //converts the entered temperature to Celsius
             temperatureChange = (temperature - 32) * 5 / 9;
             System.out.printf("%.2f", temperature);
@@ -37,7 +37,7 @@ public class TemperatureConverter {
             System.out.print("Please enter a temperature, as a number (or 'stop' to stop the program): ");
             userInput = scnr.nextLine();
 
-            if (userInput.equals("stop")) {
+            if (userInput.equalsIgnoreCase("stop")) {
                 //stops the program without an error
                 working = false;
                 System.out.println("Program successfully stopped.");
@@ -57,7 +57,7 @@ public class TemperatureConverter {
                     System.out.print("Celsius or Fahrenheit? (Please enter 'C' or 'F'): ");
                     String unit = scnr.nextLine();
 
-                    if ((unit.equals("C")) || (unit.equals("F"))) {
+                    if ((unit.equalsIgnoreCase("C")) || (unit.equalsIgnoreCase("F"))) {
                         //if the user entered C or F, the program converts the temperature accordingly
                         convertTemperature(temperature, unit);
                         workingUnit = true;
